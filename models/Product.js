@@ -24,20 +24,21 @@ Product.init(
       type: DataTypes.DECIMAL, //check on this TUTOR Validates that the value is a decimal.
       allowNull: false,
         validate: {
-          isThePrice: true
+          isDecimal: true
       }
     },
     stock: {
       type: DataTypes.INTEGER, //check with tutor Validates that the value is numeric
       allowNull: false,
+      defaultValue: 10,
       validate: {
-        len:[10],
+        isNumeric: true
       }
     },
     category_id: {
       type: DataTypes.INTEGER,  
       references: {
-        model: 'catergory',
+        model: 'category',
         key: 'id',
       },
     },
