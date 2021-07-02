@@ -54,7 +54,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
       product_name: req.body.product_name,
       price: req.body.price,
       stock: req.body.stock,
-      category_id: req.body.tagIds,
+      category_id: req.body.category_id,
     })
   //   res.status(200).json(productData);
   // } catch (err) {
